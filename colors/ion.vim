@@ -220,15 +220,15 @@ hi! link dtDelim Delimiter
 hi! link dtLocaleValue Keyword
 hi! link dtTypeValue Keyword
 
-call s:hi("diffAdded",   { "fg": s:green_2 })
+call s:hi("DiffAdd",     { "bg": s:green_0 })
+call s:hi("DiffChange",  { "bg": s:red_0 })
+hi! link diffAdded DiffAdd
+hi! link diffRemoved DiffChange
+call s:hi("DiffDelete",  { "bg": s:grey_05, "fg": s:grey_05 })
+call s:hi("DiffText",    { "bg": s:red_1, "fg": s:grey_12 })
 call s:hi("diffChanged", { "fg": s:sand_0 })
 call s:hi("diffNewFile", { "fg": s:cyan_4 })
 call s:hi("diffOldFile", { "fg": s:cyan_5 })
-call s:hi("diffRemoved", { "fg": s:red_2 })
-call s:hi("DiffAdd",     { "bg": s:green_0 })
-call s:hi("DiffChange",  { "bg": s:red_0 })
-call s:hi("DiffDelete",  { "bg": s:grey_05, "fg": s:grey_05 })
-call s:hi("DiffText",    { "bg": s:red_1, "fg": s:grey_12 })
 
 call s:hi("gitconfigVariable", { "fg": s:cyan_5 })
 
