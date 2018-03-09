@@ -130,6 +130,11 @@ call s:hi('PmenuSel', s:oblue, s:pgray, s:bold)
 call s:hi('PmenuSbar', s:default_bg, s:default_bg)
 call s:hi('PmenuThumb', s:dgray, s:mgray)
 
+" Tabs.
+call s:hi("TabLine", s:cgray, s:egray, s:none)
+call s:hi("TabLineFill", s:egray, s:egray, s:none)
+call s:hi("TabLineSel",  s:dgray, s:default_bg, s:bold)
+
 " Notes.
 call s:hi('Todo', s:lime, s:default_bg, s:bold)
 
@@ -247,7 +252,7 @@ hi link diffRemoved DiffChange
 " --- Markdown -----------------------------------------------------------------
 "
 
-call s:hi('Title', s:white, s:default_bg, s:bold)
+call s:hi('Title', s:white, s:default_lst, s:bold)
 call s:hi('markdownHeadingDelimiter', s:white, s:default_bg, s:bold)
 call s:hi('markdownHeadingRule', s:white, s:default_bg, s:bold)
 call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
