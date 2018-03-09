@@ -40,7 +40,6 @@ let s:melon  = ['#9bc53c', 28]
 let s:cyan   = ['#26a6a6', 14]
 let s:cyand  = ['#48778b', 66]
 let s:cyanf  = ['#008787', 30]
-let s:cyane  = ['#a0d649', 30]
 
 let s:default_fg = s:lgray
 let s:default_bg = s:bgray
@@ -128,7 +127,7 @@ call s:hi('helpNote')
 " Popup menu.
 call s:hi('Pmenu', s:ngray, s:xgray)
 call s:hi('PmenuSel', s:oblue, s:pgray, s:bold)
-call s:hi('PmenuSbar', s:bgray, s:bgray)
+call s:hi('PmenuSbar', s:default_bg, s:default_bg)
 call s:hi('PmenuThumb', s:dgray, s:mgray)
 
 " Notes.
