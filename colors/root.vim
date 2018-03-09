@@ -141,7 +141,7 @@ call s:hi('Todo', s:lime, s:default_bg, s:bold)
 
 call s:hi('Statement', s:white, s:default_bg, s:bold)
 call s:hi('PreProc', s:white, s:default_bg, s:bold)
-call s:hi('String', s:sblue)
+call s:hi('String', s:cyan)
 call s:hi('Comment', s:cyand, s:default_bg, s:comment_attr)
 call s:hi('Constant')
 call s:hi('Type', s:white, s:default_bg, s:bold)
