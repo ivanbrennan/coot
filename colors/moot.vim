@@ -1,6 +1,6 @@
 " Vim color scheme
 "
-" Name:       root.vim
+" Name:       moot.vim
 " Maintainer: Ivan Brennan <ivan.brennan@gmail.com>
 " License:    MIT
 
@@ -11,16 +11,18 @@ if exists('syntax_on')
    syntax reset
 endif
 
-let g:colors_name = 'root'
+let g:colors_name = 'moot'
 
 let s:black  = ['#0e1111', 232]
 let s:egray  = ['#151515', 233]
 let s:bgray  = ['#181818', 233]
 let s:xgray  = ['#1c1c1c', 234]
-let s:pgray  = ['#1f1f1f', 235]
 let s:zgray  = ['#1c1e1f', 234]
-let s:kgray  = ['#272a2b', 242]
+let s:pgray  = ['#1f1f1f', 235]
+let s:jgray  = ['#232323', 233]
+let s:kgray  = ['#2c2f30', 242]
 let s:vgray  = ['#252b32', 242]
+let s:igray  = ['#272727', 242]
 let s:mgray  = ['#2c2f30', 242]
 let s:cgray  = ['#737373', 243]
 let s:ngray  = ['#757d80', 242]
@@ -33,6 +35,7 @@ let s:white01 = ['#dfe0e8', 255]
 let s:magenta = ['#b4a0c5', 67]
 let s:sblue   = ['#778899', 67]
 let s:oblue   = ['#c4d5e5', 67]
+let s:dblue   = ['#2d3b47', 67]
 let s:yellow  = ['#ebc578', 226]
 let s:orange  = ['#f8bb39', 160]
 let s:red1    = ['#682421', 160]
@@ -46,7 +49,7 @@ let s:cyand  = ['#48778b', 66]
 let s:cyanf  = ['#008787', 30]
 
 let s:default_fg = s:lgray
-let s:default_bg = s:bgray
+let s:default_bg = s:jgray
 
 let s:italic    = 'italic'
 let s:bold      = 'bold'
@@ -95,14 +98,14 @@ endfunction
 
 call s:hi('Normal')
 call s:hi('Cursor', s:black, s:lgray)
-call s:hi('CursorLine', s:default_lst, s:xgray, s:none)
+call s:hi('CursorLine', s:default_lst, s:igray, s:none)
 call s:hi('CursorLineNr', s:cgray, s:default_bg)
 call s:hi('ColorColumn', s:default_fg, s:xgray)
 call s:hi('IncSearch', s:lime, s:xgray, s:bold)
 call s:hi('Search', s:none_lst, s:vgray, s:none)
 call s:hi('Visual', s:default_lst, s:mgray)
 call s:hi('Title', s:white01, s:default_lst, s:bold)
-call s:hi('ErrorMsg', s:melon, s:default_bg)
+call s:hi('ErrorMsg', s:lime, s:default_bg)
 call s:hi('VertSplit', s:kgray, s:default_bg, s:none)
 call s:hi('StatusLine', s:oblue, s:zgray, s:none)
 call s:hi('StatusLineNC', s:cgray, s:zgray, s:none)
@@ -136,9 +139,9 @@ call s:hi('PmenuSbar', s:default_bg, s:default_bg)
 call s:hi('PmenuThumb', s:dgray, s:mgray)
 
 " Tabs.
-call s:hi("TabLine", s:cgray, s:egray, s:none)
-call s:hi("TabLineFill", s:egray, s:egray, s:none)
-call s:hi("TabLineSel",  s:dgray, s:default_bg, s:bold)
+call s:hi("TabLine", s:cgray, s:zgray, s:none)
+call s:hi("TabLineFill", s:zgray, s:zgray, s:none)
+call s:hi("TabLineSel", s:default_fg, s:default_bg, s:none)
 
 " Notes.
 call s:hi('Todo', s:lime, s:default_bg, s:bold)
@@ -155,7 +158,6 @@ call s:hi('Comment', s:cyand, s:default_bg, s:comment_attr)
 call s:hi('Number', s:magenta)
 call s:hi('Constant')
 call s:hi('Type', s:white01, s:default_bg, s:bold)
-call s:hi('Define', s:default_fg, s:default_bg, s:bold)
 call s:hi('Function', s:white01)
 call s:hi('Identifier')
 call s:hi('Delimiter')
@@ -193,7 +195,6 @@ call s:hi('rubyStringEscape', s:sblue)
 call s:hi('rubyRegexpEscape', s:sblue)
 call s:hi('rubyRegexpAnchor', s:sblue)
 call s:hi('rubyRegexpSpecial', s:sblue)
-hi link rubyLocalVariableOrMethod Function
 
 
 "
