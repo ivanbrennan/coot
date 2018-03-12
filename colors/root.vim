@@ -67,6 +67,7 @@ function! s:hi(...)
     let fg    = get(a:, 2, s:default_fg)
     let bg    = get(a:, 3, s:default_bg)
     let attr  = get(a:, 4, s:default_str)
+    let term  = get(a:, 4, s:default_str)
 
     let cmd = ['hi', group]
 
@@ -85,6 +86,10 @@ function! s:hi(...)
         call add(cmd, 'cterm='.attr)
     endif
 
+    if term != s:default_str
+        call add(cmd, 'term='.term)
+    endif
+
     exec join(cmd, ' ')
 endfunction
 
@@ -95,8 +100,9 @@ endfunction
 
 call s:hi('Normal')
 call s:hi('Cursor', s:black, s:lgray)
-call s:hi('CursorLine', s:default_lst, s:xgray, s:none)
-call s:hi('CursorLineNr', s:cgray, s:default_bg)
+call s:hi('CursorLine', s:default_lst, s:xgray, s:none, s:none)
+call s:hi('CursorLineNr', s:ngray)
+call s:hi('CursorColumn', s:default_lst, s:xgray, s:none, s:none)
 call s:hi('ColorColumn', s:default_fg, s:xgray)
 call s:hi('IncSearch', s:lime, s:default_lst, s:bold)
 call s:hi('Search', s:none_lst, s:vgray, s:none)

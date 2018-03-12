@@ -23,10 +23,11 @@ let s:jgray  = ['#232323', 233]
 let s:kgray  = ['#2c2f30', 242]
 let s:vgray  = ['#252b32', 242]
 let s:igray  = ['#272727', 242]
-let s:mgray  = ['#2c2f30', 242]
+let s:mgray  = ['#31373b', 242]
 let s:cgray  = ['#737373', 243]
 let s:ngray  = ['#757d80', 242]
 let s:dgray  = ['#a9a9a9', 248]
+let s:ogray  = ['#b8b8b8', 248]
 let s:lgray  = ['#d3d3d3', 252]
 
 let s:white00 = ['#eeeeee', 255]
@@ -70,6 +71,7 @@ function! s:hi(...)
     let fg    = get(a:, 2, s:default_fg)
     let bg    = get(a:, 3, s:default_bg)
     let attr  = get(a:, 4, s:default_str)
+    let term  = get(a:, 4, s:default_str)
 
     let cmd = ['hi', group]
 
@@ -88,6 +90,10 @@ function! s:hi(...)
         call add(cmd, 'cterm='.attr)
     endif
 
+    if term != s:default_str
+        call add(cmd, 'term='.term)
+    endif
+
     exec join(cmd, ' ')
 endfunction
 
@@ -98,11 +104,12 @@ endfunction
 
 call s:hi('Normal')
 call s:hi('Cursor', s:black, s:lgray)
-call s:hi('CursorLine', s:default_lst, s:igray, s:none)
-call s:hi('CursorLineNr', s:cgray, s:default_bg)
+call s:hi('CursorLine', s:default_lst, s:igray, s:none, s:none)
+call s:hi('CursorLineNr', s:ngray)
+call s:hi('CursorColumn', s:default_lst, s:igray, s:none, s:none)
 call s:hi('ColorColumn', s:default_fg, s:xgray)
 call s:hi('IncSearch', s:lime, s:default_lst, s:bold)
-call s:hi('Search', s:none_lst, s:vgray, s:none)
+call s:hi('Search', s:none_lst, s:mgray, s:none)
 call s:hi('Visual', s:default_lst, s:mgray)
 call s:hi('Title', s:white01, s:default_lst, s:bold)
 call s:hi('ErrorMsg', s:lime, s:default_bg)
@@ -164,7 +171,7 @@ call s:hi('Delimiter')
 call s:hi('Special', s:yellow)
 call s:hi('MatchParen', s:lime, s:default_bg, s:bold)
 call s:hi('Question', s:cgray, s:default_bg)
-call s:hi('MoreMsg', s:dgray, s:default_lst, s:bold)
+call s:hi('MoreMsg', s:ogray, s:default_lst, s:bold)
 
 
 "
