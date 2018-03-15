@@ -185,7 +185,12 @@ call s:hi('vimHiGuiFgBg')
 call s:hi('vimHiCTerm')
 call s:hi('vimHiCTermFgBg')
 call s:hi('vimSynType')
+hi link vimCommand Statement
 hi link vimCommentTitle Comment
+hi link vimLet vimCommand
+hi link vimVar Identifier
+hi link vimFuncVar Identifier
+hi link vimEnvvar PreProc
 
 
 "
