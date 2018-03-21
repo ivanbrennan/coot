@@ -44,6 +44,7 @@ let s:red     = ['#391716', 160]
 let s:green   = ['#1d2717', 28]
 let s:lime    = ['#bbe068', 28]
 let s:melon   = ['#9bc53c', 28]
+let s:tang    = ['#dfdf00', 28]
 
 let s:cyan   = ['#26a6a6', 14]
 let s:cyand  = ['#48778b', 66]
@@ -108,7 +109,7 @@ call s:hi('CursorLine', s:default_lst, s:igray, s:none, s:none)
 call s:hi('CursorLineNr', s:ngray)
 call s:hi('CursorColumn', s:default_lst, s:igray, s:none, s:none)
 call s:hi('ColorColumn', s:default_fg, s:xgray)
-call s:hi('IncSearch', s:lime, s:default_lst, s:bold)
+call s:hi('IncSearch', s:tang, s:default_lst, s:bold)
 call s:hi('Search', s:none_lst, s:mgray, s:none)
 call s:hi('Visual', s:default_lst, s:mgray)
 call s:hi('Title', s:white01, s:default_lst, s:bold)
