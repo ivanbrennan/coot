@@ -110,6 +110,7 @@ call s:hi('Search', s:none_lst, s:vgray, s:none)
 call s:hi('Visual', s:default_lst, s:mgray)
 call s:hi('Title', s:white01, s:default_lst, s:bold)
 call s:hi('ErrorMsg', s:melon, s:default_bg)
+call s:hi('WarningMsg', s:orange, s:default_bg)
 call s:hi('VertSplit', s:kgray, s:default_bg, s:none)
 call s:hi('StatusLine', s:oblue, s:zgray, s:none)
 call s:hi('StatusLineNC', s:cgray, s:zgray, s:none)
@@ -171,6 +172,13 @@ call s:hi('MatchParen', s:lime, s:default_bg, s:bold)
 call s:hi('Question', s:cgray, s:default_bg)
 call s:hi('MoreMsg', s:dgray, s:default_lst, s:bold)
 
+
+"
+" --- C ------------------------------------------------------------------------
+"
+
+hi link cCustomFunc Function
+hi link cBoolean    Boolean
 
 "
 " --- VimL ---------------------------------------------------------------------
