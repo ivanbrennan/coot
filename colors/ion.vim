@@ -11,13 +11,13 @@ set background=dark
 
 function! s:hi(group, style)
   execute "highlight" a:group
-        \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
-        \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
-        \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
-        \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
-        \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg.cterm : "NONE")
-        \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg.cterm : "NONE")
-        \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
+  \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
+  \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
+  \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
+  \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
+  \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg.cterm : "NONE")
+  \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg.cterm : "NONE")
+  \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endf
 
 " Palette ۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰۰{{{1
