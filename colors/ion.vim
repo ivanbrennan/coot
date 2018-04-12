@@ -9,7 +9,7 @@ syntax reset
 let g:colors_name="ion"
 set background=dark
 
-function! s:hi(group, style)
+function! s:hi(group, style) abort
   execute "highlight" a:group
   \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
   \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")

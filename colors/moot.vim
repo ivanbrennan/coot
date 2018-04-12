@@ -67,7 +67,7 @@ if !exists("g:monochrome_italic_comments")
 endif
 let s:comment_attr = g:monochrome_italic_comments ? s:italic : s:none
 
-function! s:hi(...)
+function! s:hi(...) abort
     let group = a:1
     let fg    = get(a:, 2, s:default_fg)
     let bg    = get(a:, 3, s:default_bg)
