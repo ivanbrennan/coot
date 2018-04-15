@@ -170,6 +170,7 @@ call s:hi('Delimiter')
 call s:hi('Special', s:yellow)
 call s:hi('MatchParen', s:lime, s:default_bg, s:bold)
 call s:hi('Question', s:cgray, s:default_bg)
+call s:hi('ModeMsg', s:ngray, s:default_bg, s:none)
 call s:hi('MoreMsg', s:dgray, s:default_lst, s:bold)
 
 
