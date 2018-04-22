@@ -21,6 +21,7 @@ let s:pgray  = ['#1f1f1f', 235]
 let s:zgray  = ['#1c1e1f', 234]
 let s:kgray  = ['#272a2b', 242]
 let s:vgray  = ['#252b32', 242]
+let s:igray  = ['#272727', 242]
 let s:mgray  = ['#2D3140', 242]
 let s:cgray  = ['#737373', 243]
 let s:ngray  = ['#757d80', 242]
@@ -105,12 +106,12 @@ call s:hi('CursorLine', s:default_lst, s:xgray, s:none, s:none)
 call s:hi('CursorLineNr', s:ngray)
 call s:hi('CursorColumn', s:default_lst, s:xgray, s:none, s:none)
 call s:hi('ColorColumn', s:default_fg, s:xgray)
-call s:hi('IncSearch', s:tang, s:default_lst, s:bold)
-call s:hi('Search', s:none_lst, s:vgray, s:none)
+call s:hi('IncSearch', s:orange, s:default_lst, s:bold)
+call s:hi('Search', s:white00, s:vgray, s:none)
 call s:hi('Visual', s:default_lst, s:mgray)
 call s:hi('Title', s:white01, s:default_lst, s:bold)
 call s:hi('ErrorMsg', s:melon, s:default_bg)
-call s:hi('WarningMsg', s:orange, s:default_bg)
+call s:hi('WarningMsg', s:orange, s:default_lst)
 call s:hi('VertSplit', s:kgray, s:default_bg, s:none)
 call s:hi('StatusLine', s:oblue, s:zgray, s:none)
 call s:hi('StatusLineNC', s:cgray, s:zgray, s:none)
@@ -313,3 +314,10 @@ call s:hi('NeomakeError', s:yellow)
 call s:hi('NeomakeInfo', s:default_fg, s:default_bg, s:bold)
 call s:hi('NeomakeMessage')
 call s:hi('NeomakeWarning', s:yellow)
+
+
+"
+" --- Traces ------------------------------------------------------------------
+"
+
+call s:hi('TracesSearch', s:orange, s:igray, s:none)
