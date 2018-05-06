@@ -50,7 +50,7 @@ let s:berry   = ['#e80c4a', 28]
 
 let s:cyan   = ['#26a6a6', 14]
 let s:cyand  = ['#48778b', 66]
-let s:cyanf  = ['#008787', 30]
+let s:cyanf  = ['#5b96af', 30]
 
 let s:default_fg = s:lgray
 let s:default_bg = s:jgray
@@ -163,12 +163,15 @@ call s:hi('Todo', s:lime, s:default_bg, s:bold)
 "
 
 call s:hi('Statement', s:white01, s:default_bg, s:bold)
+call s:hi('Operator', s:yellow, s:default_bg, s:none)
 call s:hi('PreProc', s:white01, s:default_bg, s:bold)
+call s:hi('Include', s:cyanf, s:default_bg, s:none)
 call s:hi('String', s:cyan)
 call s:hi('Comment', s:cyand, s:default_bg, s:comment_attr)
 call s:hi('Number', s:magenta)
 call s:hi('Constant')
-call s:hi('Type', s:white01, s:default_bg, s:bold)
+call s:hi('Type', s:default_fg, s:default_bg, s:bold)
+call s:hi('Structure', s:cyanf, s:default_bg, s:none)
 call s:hi('Function', s:white01)
 call s:hi('Identifier')
 call s:hi('Delimiter')
