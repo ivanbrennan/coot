@@ -103,7 +103,7 @@ endfunction
 call s:hi('Normal')
 call s:hi('Cursor', s:black, s:lgray)
 call s:hi('CursorLine', s:default_lst, s:xgray, s:none, s:none)
-call s:hi('CursorLineNr', s:ngray)
+call s:hi('CursorLineNr', s:ngray, s:default_bg, s:none)
 call s:hi('CursorColumn', s:default_lst, s:xgray, s:none, s:none)
 call s:hi('ColorColumn', s:default_fg, s:xgray)
 call s:hi('IncSearch', s:orange, s:default_lst, s:bold)
