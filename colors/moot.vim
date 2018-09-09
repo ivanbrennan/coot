@@ -24,6 +24,7 @@ let s:kgray  = ['#2c2f30', 242]
 let s:vgray  = ['#252b32', 242]
 let s:igray  = ['#272727', 242]
 let s:mgray  = ['#2D3140', 242]
+let s:fgray  = ['#3A3E4D', 242]
 let s:cgray  = ['#737373', 243]
 let s:ngray  = ['#757d80', 242]
 let s:dgray  = ['#a9a9a9', 248]
@@ -130,7 +131,7 @@ call s:hi('FoldColumn', s:dgray)
 call s:hi('Folded')
 
 " Line numbers gutter.
-call s:hi('LineNr', s:mgray)
+call s:hi('LineNr', s:fgray)
 
 " Small arrow used for tabs.
 call s:hi('SpecialKey', s:cgray, s:default_bg)
