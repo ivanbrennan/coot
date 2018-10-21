@@ -155,6 +155,10 @@ call s:hi("TabLine", s:cgray, s:zgray, s:none)
 call s:hi("TabLineFill", s:zgray, s:zgray, s:none)
 call s:hi("TabLineSel", s:default_fg, s:default_bg, s:none)
 
+" Spell.
+call s:hi('SpellBad', s:berry, s:default_bg, s:none)
+call s:hi('SpellCap', s:oblue, s:default_bg, s:none)
+
 " Notes.
 call s:hi('Todo', s:lime, s:default_bg, s:bold)
 

@@ -43,6 +43,7 @@ let s:green   = ['#1d2717', 28]
 let s:lime    = ['#bbe068', 28]
 let s:melon   = ['#9bc53c', 28]
 let s:tang    = ['#dfdf00', 28]
+let s:berry   = ['#e80c4a', 28]
 
 let s:cyan   = ['#26a6a6', 14]
 let s:cyand  = ['#48778b', 66]
@@ -149,6 +150,10 @@ call s:hi('PmenuThumb', s:dgray, s:mgray)
 call s:hi("TabLine", s:cgray, s:egray, s:none)
 call s:hi("TabLineFill", s:egray, s:egray, s:none)
 call s:hi("TabLineSel",  s:dgray, s:default_bg, s:bold)
+
+" Spell.
+call s:hi('SpellBad', s:berry, s:default_bg, s:none)
+call s:hi('SpellCap', s:oblue, s:default_bg, s:none)
 
 " Notes.
 call s:hi('Todo', s:lime, s:default_bg, s:bold)
