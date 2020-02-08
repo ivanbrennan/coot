@@ -174,7 +174,7 @@ call s:hi('Include', s:cyanf, s:default_bg, s:none)
 call s:hi('String', s:cyan)
 call s:hi('Comment', s:cyand, s:default_bg, s:comment_attr)
 call s:hi('Number', s:magenta)
-call s:hi('Constant')
+call s:hi('Constant', s:oblue) " or yellow fg?
 call s:hi('Type', s:default_fg, s:default_bg, s:bold)
 call s:hi('Structure', s:cyanf, s:default_bg, s:none)
 call s:hi('Function', s:white01)
