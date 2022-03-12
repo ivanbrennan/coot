@@ -121,7 +121,9 @@ call s:hi('WarningMsg', s:orange, s:default_lst)
 call s:hi('VertSplit', s:kgray, s:default_bg, s:none)
 call s:hi('StatusLine', s:oblue, s:zgray, s:none)
 call s:hi('StatusLineNC', s:cgray, s:zgray, s:none)
-call s:hi('Terminal', s:default_fg, s:bgray)
+call s:hi('Terminal', s:default_fg, s:xgray)
+call s:hi('StatusLineTerm', s:lgray, s:zgray, s:none)
+call s:hi('StatusLineTermNC', s:cgray, s:zgray, s:none)
 
 " Tildes at the bottom of a buffer, etc.
 call s:hi('NonText', s:dgray)
