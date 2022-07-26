@@ -330,3 +330,11 @@ call s:hi('NeomakeWarning', s:yellow)
 "
 
 call s:hi('TracesSearch', s:orange, s:igray, s:none)
+
+
+
+"
+" --- clever-f ----------------------------------------------------------------
+"
+
+call s:hi('CleverFChar', s:orange, s:xgray, s:bold)
