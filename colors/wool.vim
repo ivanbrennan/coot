@@ -13,52 +13,39 @@ endif
 
 let g:colors_name = 'wool'
 
-let s:black  = ['#0e1111', 232]
-let s:egray  = ['#151515', 233]
-let s:bgray  = ['#181818', 233]
-let s:xgray  = ['#1c1c1c', 234]
-let s:zgray  = ['#1c1d21', 234]
-let s:pgray  = ['#1f1f1f', 235]
-let s:jgray  = ['#232323', 233]
-let s:kgray  = ['#2c2f30', 242]
-let s:hgray  = ['#222327', 233]
-let s:vgray  = ['#252b32', 242]
-let s:igray  = ['#28292d', 242]
-let s:mgray  = ['#31343f', 242]
-let s:fgray  = ['#3A3E4D', 242]
-let s:cgray  = ['#737373', 243]
-let s:ngray  = ['#757d80', 242]
-let s:dgray  = ['#a9a9a9', 248]
-let s:ogray  = ['#b8b8b8', 248]
-let s:lgray  = ['#d3d3d3', 252]
+let s:black  = ['#0e1111', 233]
+let s:grey00 = ['#1c1c1c', 234]
+let s:grey01 = ['#1f1f1f', 234]
+let s:grey02 = ['#1c1d21', 234]
+let s:grey03 = ['#222327', 235]
+let s:grey04 = ['#2c2f30', 236]
+let s:grey05 = ['#28292d', 236]
+let s:grey06 = ['#31343f', 237]
+let s:grey07 = ['#3A3E4D', 237]
+let s:grey08 = ['#737373', 243]
+let s:grey09 = ['#757d80', 244]
+let s:grey10 = ['#a9a9a9', 248]
+let s:grey11 = ['#b8b8b8', 250]
+let s:grey12 = ['#d3d3d3', 252]
+let s:grey13 = ['#dfe0e8', 254]
+let s:white  = ['#eeeeee', 255]
 
-let s:white00 = ['#eeeeee', 255]
-let s:white01 = ['#dfe0e8', 255]
+let s:magenta = ['#b4a0c5', 182]
+let s:steel   = ['#5b96af', 67]
+let s:shale   = ['#778899', 102]
+let s:slate   = ['#6f82a6', 103]
+let s:sky     = ['#c4d5e5', 153]
+let s:yellow  = ['#ebc578', 222]
+let s:teal    = ['#ecbe7b', 222]
+let s:orange  = ['#f8bb39', 221]
+let s:red     = ['#682421', 88]
+let s:darkred = ['#391716', 52]
+let s:green   = ['#1d2717', 65]
+let s:lime    = ['#bbe068', 149]
+let s:berry   = ['#e80c4a', 197]
 
-let s:magenta = ['#b4a0c5', 67]
-let s:violet  = ['#a9a1e1', 67]
-let s:sblue   = ['#778899', 67]
-let s:oblue   = ['#c4d5e5', 67]
-let s:dblue   = ['#2d3b47', 67]
-let s:yellow  = ['#ebc578', 226]
-let s:orange  = ['#f8bb39', 160]
-let s:red1    = ['#682421', 160]
-let s:red     = ['#391716', 160]
-let s:green   = ['#1d2717', 28]
-let s:lime    = ['#bbe068', 28]
-let s:melon   = ['#9bc53c', 28]
-let s:tang    = ['#dfdf00', 28]
-let s:tan     = ['#e2d91d', 226]
-let s:teal    = ['#ecbe7b', 226]
-let s:berry   = ['#e80c4a', 28]
-
-let s:cyan   = ['#26a6a6', 14]
-let s:cyand  = ['#48778b', 66]
-let s:cyanf  = ['#5b96af', 30]
-let s:base6  = ['#6f82a6', 14]
-
-let s:default_fg = s:lgray
-let s:default_bg = s:hgray
+let s:default_fg = s:grey12
+let s:default_bg = s:grey03
 
 let s:italic    = 'italic'
 let s:bold      = 'bold'
@@ -111,60 +98,60 @@ endfunction
 "
 
 call s:hi('Normal')
-call s:hi('Cursor', s:black, s:lgray)
-call s:hi('CursorLine', s:default_lst, s:igray, s:none, s:none)
-call s:hi('CursorLineNr', s:ngray, s:default_bg, s:none)
-call s:hi('CursorColumn', s:default_lst, s:igray, s:none, s:none)
-call s:hi('ColorColumn', s:default_fg, s:xgray)
-call s:hi('IncSearch', s:orange, s:igray, s:bold)
-call s:hi('Search', s:white00, s:mgray, s:none)
-call s:hi('Visual', s:default_lst, s:mgray)
-call s:hi('Title', s:white01, s:default_lst, s:bold)
+call s:hi('Cursor', s:black, s:grey12)
+call s:hi('CursorLine', s:default_lst, s:grey05, s:none, s:none)
+call s:hi('CursorLineNr', s:grey09, s:default_bg, s:none)
+call s:hi('CursorColumn', s:default_lst, s:grey05, s:none, s:none)
+call s:hi('ColorColumn', s:default_fg, s:grey00)
+call s:hi('IncSearch', s:orange, s:grey05, s:bold)
+call s:hi('Search', s:white, s:grey06, s:none)
+call s:hi('Visual', s:default_lst, s:grey06)
+call s:hi('Title', s:grey13, s:default_lst, s:bold)
 call s:hi('ErrorMsg', s:lime, s:default_bg)
 call s:hi('WarningMsg', s:orange, s:default_lst)
-call s:hi('VertSplit', s:kgray, s:default_bg, s:none)
-call s:hi('StatusLine', s:oblue, s:zgray, s:none)
-call s:hi('StatusLineNC', s:cgray, s:zgray, s:none)
-call s:hi('Terminal', s:default_fg, s:xgray)
-call s:hi('StatusLineTerm', s:lgray, s:zgray, s:none)
-call s:hi('StatusLineTermNC', s:cgray, s:zgray, s:none)
+call s:hi('VertSplit', s:grey04, s:default_bg, s:none)
+call s:hi('StatusLine', s:sky, s:grey02, s:none)
+call s:hi('StatusLineNC', s:grey08, s:grey02, s:none)
+call s:hi('Terminal', s:default_fg, s:grey00)
+call s:hi('StatusLineTerm', s:grey12, s:grey02, s:none)
+call s:hi('StatusLineTermNC', s:grey08, s:grey02, s:none)
 
 " Tildes at the bottom of a buffer, etc.
-call s:hi('NonText', s:dgray)
-call s:hi('EndOfBuffer', s:xgray, s:xgray)
+call s:hi('NonText', s:grey10)
+call s:hi('EndOfBuffer', s:grey00, s:grey00)
 
 " Folding.
-call s:hi('FoldColumn', s:dgray)
+call s:hi('FoldColumn', s:grey10)
 call s:hi('Folded')
 
 " Line numbers gutter.
-call s:hi('LineNr', s:fgray)
+call s:hi('LineNr', s:grey07)
 
 " Small arrow used for tabs.
-call s:hi('SpecialKey', s:cgray, s:default_bg)
+call s:hi('SpecialKey', s:grey08, s:default_bg)
 
 " File browsers.
-call s:hi('Directory', s:white01, s:default_bg, s:bold)
+call s:hi('Directory', s:grey13, s:default_bg, s:bold)
 
 " Help.
 call s:hi('helpSpecial')
-call s:hi('helpHyperTextJump', s:sblue, s:default_bg, s:underline)
+call s:hi('helpHyperTextJump', s:shale, s:default_bg, s:underline)
 call s:hi('helpNote')
 
 " Popup menu.
-call s:hi('Pmenu', s:ngray, s:xgray)
-call s:hi('PmenuSel', s:oblue, s:pgray, s:bold)
+call s:hi('Pmenu', s:grey09, s:grey00)
+call s:hi('PmenuSel', s:sky, s:grey01, s:bold)
 call s:hi('PmenuSbar', s:default_bg, s:default_bg)
-call s:hi('PmenuThumb', s:dgray, s:mgray)
+call s:hi('PmenuThumb', s:grey10, s:grey06)
 
 " Tabs.
-call s:hi("TabLine", s:cgray, s:zgray, s:none)
-call s:hi("TabLineFill", s:zgray, s:zgray, s:none)
+call s:hi("TabLine", s:grey08, s:grey02, s:none)
+call s:hi("TabLineFill", s:grey02, s:grey02, s:none)
 call s:hi("TabLineSel", s:default_fg, s:default_bg, s:none)
 
 " Spell.
 call s:hi('SpellBad', s:berry, s:default_bg, s:none)
-call s:hi('SpellCap', s:oblue, s:default_bg, s:none)
+call s:hi('SpellCap', s:sky, s:default_bg, s:none)
 
 " Notes.
 call s:hi('Todo', s:lime, s:default_bg, s:bold)
@@ -174,24 +161,24 @@ call s:hi('Todo', s:lime, s:default_bg, s:bold)
 " --- Programming languages ----------------------------------------------------
 "
 
-call s:hi('Statement', s:white01, s:default_bg, s:bold)
+call s:hi('Statement', s:grey13, s:default_bg, s:bold)
 call s:hi('Operator', s:yellow, s:default_bg, s:none)
-call s:hi('PreProc', s:white01, s:default_bg, s:bold)
-call s:hi('Include', s:cyanf, s:default_bg, s:none)
+call s:hi('PreProc', s:grey13, s:default_bg, s:bold)
+call s:hi('Include', s:steel, s:default_bg, s:none)
 call s:hi('String', s:teal)
-call s:hi('Comment', s:base6, s:default_bg, s:comment_attr)
+call s:hi('Comment', s:slate, s:default_bg, s:comment_attr)
 call s:hi('Number', s:magenta)
-call s:hi('Constant', s:oblue) " or yellow fg?
+call s:hi('Constant', s:sky) " or yellow fg?
 call s:hi('Type', s:default_fg, s:default_bg, s:bold)
-call s:hi('Structure', s:cyanf, s:default_bg, s:none)
-call s:hi('Function', s:white01)
+call s:hi('Structure', s:steel, s:default_bg, s:none)
+call s:hi('Function', s:grey13)
 call s:hi('Identifier')
 call s:hi('Delimiter')
 call s:hi('Special', s:yellow)
 call s:hi('MatchParen', s:lime, s:default_bg, s:bold)
-call s:hi('Question', s:cgray, s:default_bg)
-call s:hi('ModeMsg', s:ngray, s:default_bg, s:none)
-call s:hi('MoreMsg', s:ogray, s:default_lst, s:bold)
+call s:hi('Question', s:grey08, s:default_bg)
+call s:hi('ModeMsg', s:grey09, s:default_bg, s:none)
+call s:hi('MoreMsg', s:grey11, s:default_lst, s:bold)
 
 
 "
@@ -228,12 +215,12 @@ hi link vimEnvvar PreProc
 "
 
 call s:hi('rubyConstant')
-call s:hi('rubySharpBang', s:cgray)
-call s:hi('rubyStringDelimiter', s:sblue)
-call s:hi('rubyStringEscape', s:sblue)
-call s:hi('rubyRegexpEscape', s:sblue)
-call s:hi('rubyRegexpAnchor', s:sblue)
-call s:hi('rubyRegexpSpecial', s:sblue)
+call s:hi('rubySharpBang', s:grey08)
+call s:hi('rubyStringDelimiter', s:shale)
+call s:hi('rubyStringEscape', s:shale)
+call s:hi('rubyRegexpEscape', s:shale)
+call s:hi('rubyRegexpAnchor', s:shale)
+call s:hi('rubyRegexpSpecial', s:shale)
 
 
 "
@@ -241,7 +228,7 @@ call s:hi('rubyRegexpSpecial', s:sblue)
 "
 
 call s:hi('elixirAlias', s:default_fg, s:default_bg, s:none)
-call s:hi('elixirDelimiter', s:sblue)
+call s:hi('elixirDelimiter', s:shale)
 call s:hi('elixirSelf', s:default_fg, s:default_bg, s:none)
 
 " For ||, ->, etc.
@@ -261,39 +248,39 @@ hi link elixirStringDelimiter String
 " --- Perl ---------------------------------------------------------------------
 "
 
-call s:hi('perlSharpBang', s:cgray)
-call s:hi('perlStringStartEnd', s:sblue)
-call s:hi('perlStringEscape', s:sblue)
-call s:hi('perlMatchStartEnd', s:sblue)
+call s:hi('perlSharpBang', s:grey08)
+call s:hi('perlStringStartEnd', s:shale)
+call s:hi('perlStringEscape', s:shale)
+call s:hi('perlMatchStartEnd', s:shale)
 
 
 "
 " --- Python -------------------------------------------------------------------
 "
 
-call s:hi('pythonEscape', s:sblue)
+call s:hi('pythonEscape', s:shale)
 
 
 "
 " --- JavaScript ---------------------------------------------------------------
 "
 
-call s:hi('javaScriptFunction', s:white01, s:default_bg, s:bold)
+call s:hi('javaScriptFunction', s:grey13, s:default_bg, s:bold)
 
 
 "
 " --- Diffs --------------------------------------------------------------------
 "
 
-call s:hi('diffFile', s:cgray)
-call s:hi('diffNewFile', s:cgray)
-call s:hi('diffIndexLine', s:cgray)
-call s:hi('diffLine', s:cgray)
-call s:hi('diffSubname', s:cgray)
+call s:hi('diffFile', s:grey08)
+call s:hi('diffNewFile', s:grey08)
+call s:hi('diffIndexLine', s:grey08)
+call s:hi('diffLine', s:grey08)
+call s:hi('diffSubname', s:grey08)
 call s:hi('DiffAdd', s:default_lst, s:green)
-call s:hi('DiffDelete', s:xgray, s:xgray)
-call s:hi('DiffChange', s:default_lst, s:red)
-call s:hi('DiffText', s:lgray, s:red1, s:none)
+call s:hi('DiffDelete', s:grey00, s:grey00)
+call s:hi('DiffChange', s:default_lst, s:darkred)
+call s:hi('DiffText', s:grey12, s:red, s:none)
 hi link diffAdded DiffAdd
 hi link diffRemoved DiffChange
 
@@ -301,9 +288,9 @@ hi link diffRemoved DiffChange
 " --- Markdown -----------------------------------------------------------------
 "
 
-call s:hi('markdownHeadingDelimiter', s:white01, s:default_bg, s:bold)
-call s:hi('markdownHeadingRule', s:white01, s:default_bg, s:bold)
-call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
+call s:hi('markdownHeadingDelimiter', s:grey13, s:default_bg, s:bold)
+call s:hi('markdownHeadingRule', s:grey13, s:default_bg, s:bold)
+call s:hi('markdownLinkText', s:shale, s:default_bg, s:underline)
 
 
 "
@@ -312,8 +299,8 @@ call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 
 call s:hi('gitcommitComment', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitOnBranch', s:default_fg, s:default_bg, s:none)
-call s:hi('gitcommitBranch', s:sblue, s:default_bg, s:none)
-call s:hi('gitcommitHeader', s:white01, s:default_bg, s:bold)
+call s:hi('gitcommitBranch', s:shale, s:default_bg, s:none)
+call s:hi('gitcommitHeader', s:grey13, s:default_bg, s:bold)
 call s:hi('gitcommitSelected', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitDiscarded', s:default_fg, s:default_bg, s:none)
 call s:hi('gitcommitSelectedType', s:default_fg, s:default_bg, s:none)
@@ -325,7 +312,7 @@ call s:hi('gitcommitDiscardedType', s:default_fg, s:default_bg, s:none)
 "
 
 call s:hi('NeomakeMessageSign')
-call s:hi('NeomakeWarningSign', s:sblue)
+call s:hi('NeomakeWarningSign', s:shale)
 call s:hi('NeomakeErrorSign', s:yellow)
 call s:hi('NeomakeInfoSign')
 call s:hi('NeomakeError', s:yellow)
@@ -338,7 +325,7 @@ call s:hi('NeomakeWarning', s:yellow)
 " --- Traces ------------------------------------------------------------------
 "
 
-call s:hi('TracesSearch', s:orange, s:igray, s:none)
+call s:hi('TracesSearch', s:orange, s:grey05, s:none)
 
 
 
@@ -346,4 +333,4 @@ call s:hi('TracesSearch', s:orange, s:igray, s:none)
 " --- clever-f ----------------------------------------------------------------
 "
 
-call s:hi('CleverFChar', s:orange, s:igray, s:bold)
+call s:hi('CleverFChar', s:orange, s:grey05, s:bold)
